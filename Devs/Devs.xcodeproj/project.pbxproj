@@ -11,6 +11,8 @@
 		865FC8AD285166E6000AB5DB /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865FC8AC285166E6000AB5DB /* CardData.swift */; };
 		865FC8AF28516BFD000AB5DB /* sound-chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 865FC8AE28516BFD000AB5DB /* sound-chime.mp3 */; };
 		865FC8B128516C37000AB5DB /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865FC8B028516C37000AB5DB /* PlaySound.swift */; };
+		865FC8B7285184BA000AB5DB /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865FC8B6285184BA000AB5DB /* Stickers.xcassets */; };
+		865FC8BB285184BA000AB5DB /* DevStickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 865FC8B4285184B9000AB5DB /* DevStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		869FC52C28503F5F00C962EC /* DevsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FC52B28503F5F00C962EC /* DevsApp.swift */; };
 		869FC52E28503F5F00C962EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FC52D28503F5F00C962EC /* ContentView.swift */; };
 		869FC53028503F6200C962EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869FC52F28503F6200C962EC /* Assets.xcassets */; };
@@ -19,11 +21,38 @@
 		869FC53C285047CE00C962EC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FC53B285047CE00C962EC /* CardView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		865FC8B9285184BA000AB5DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 869FC52028503F5F00C962EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 865FC8B3285184B9000AB5DB;
+			remoteInfo = DevStickers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		865FC8BF285184BA000AB5DB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				865FC8BB285184BA000AB5DB /* DevStickers.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		865FC8AA2851652C000AB5DB /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		865FC8AC285166E6000AB5DB /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		865FC8AE28516BFD000AB5DB /* sound-chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-chime.mp3"; sourceTree = "<group>"; };
 		865FC8B028516C37000AB5DB /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		865FC8B4285184B9000AB5DB /* DevStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DevStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		865FC8B6285184BA000AB5DB /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		865FC8B8285184BA000AB5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		869FC52828503F5F00C962EC /* Devs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869FC52B28503F5F00C962EC /* DevsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevsApp.swift; sourceTree = "<group>"; };
 		869FC52D28503F5F00C962EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,10 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		865FC8B5285184B9000AB5DB /* DevStickers */ = {
+			isa = PBXGroup;
+			children = (
+				865FC8B6285184BA000AB5DB /* Stickers.xcassets */,
+				865FC8B8285184BA000AB5DB /* Info.plist */,
+			);
+			path = DevStickers;
+			sourceTree = "<group>";
+		};
 		869FC51F28503F5F00C962EC = {
 			isa = PBXGroup;
 			children = (
 				869FC52A28503F5F00C962EC /* Devs */,
+				865FC8B5285184B9000AB5DB /* DevStickers */,
 				869FC52928503F5F00C962EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				869FC52828503F5F00C962EC /* Devs.app */,
+				865FC8B4285184B9000AB5DB /* DevStickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +128,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		865FC8B3285184B9000AB5DB /* DevStickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 865FC8BC285184BA000AB5DB /* Build configuration list for PBXNativeTarget "DevStickers" */;
+			buildPhases = (
+				865FC8B2285184B9000AB5DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DevStickers;
+			productName = DevStickers;
+			productReference = 865FC8B4285184B9000AB5DB /* DevStickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		869FC52728503F5F00C962EC /* Devs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 869FC53628503F6200C962EC /* Build configuration list for PBXNativeTarget "Devs" */;
@@ -95,10 +150,12 @@
 				869FC52428503F5F00C962EC /* Sources */,
 				869FC52528503F5F00C962EC /* Frameworks */,
 				869FC52628503F5F00C962EC /* Resources */,
+				865FC8BF285184BA000AB5DB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				865FC8BA285184BA000AB5DB /* PBXTargetDependency */,
 			);
 			name = Devs;
 			productName = Devs;
@@ -115,6 +172,9 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					865FC8B3285184B9000AB5DB = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					869FC52728503F5F00C962EC = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -134,11 +194,20 @@
 			projectRoot = "";
 			targets = (
 				869FC52728503F5F00C962EC /* Devs */,
+				865FC8B3285184B9000AB5DB /* DevStickers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		865FC8B2285184B9000AB5DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				865FC8B7285184BA000AB5DB /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		869FC52628503F5F00C962EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,7 +237,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		865FC8BA285184BA000AB5DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 865FC8B3285184B9000AB5DB /* DevStickers */;
+			targetProxy = 865FC8B9285184BA000AB5DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		865FC8BD285184BA000AB5DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7J27C6KE2Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DevStickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OnceDev.Devs.DevStickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		865FC8BE285184BA000AB5DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7J27C6KE2Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DevStickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OnceDev.Devs.DevStickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		869FC53428503F6200C962EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -347,6 +462,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		865FC8BC285184BA000AB5DB /* Build configuration list for PBXNativeTarget "DevStickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				865FC8BD285184BA000AB5DB /* Debug */,
+				865FC8BE285184BA000AB5DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		869FC52328503F5F00C962EC /* Build configuration list for PBXProject "Devs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
