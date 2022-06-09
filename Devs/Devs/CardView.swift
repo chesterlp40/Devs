@@ -11,12 +11,21 @@ struct CardView: View {
     // MARK: - PROPERTIES
     
     var card: Card
+    var haptiFeedback = UIImpactFeedbackGenerator(
+        style: .heavy
+    )
+    
+    @State private var fadeIn = false
+    @State private var moveDownward = false
+    @State private var moveUpward = false
+    @State private var showAlert = false
     
     // MARK: - CARD
     
     var body: some View {
         ZStack {
             Image(card.imageName)
+                .opacity(fadeIn ? 1.0 : 0.0)
             
             VStack {
                 Text(card.title)
@@ -30,12 +39,12 @@ struct CardView: View {
                     .italic()
                     
             }
-            .offset(y: -218)
+            .offset(y: moveDownward ? -218 : -300)
             
             Button(action: {
-                print("Button was tapped")
-                
                 playSound("sound-chime", "mp3")
+                self.haptiFeedback.impactOccurred()
+                self.showAlert.toggle()
             }) {
                 HStack {
                     Text(card.callToAction.uppercased())
@@ -64,7 +73,7 @@ struct CardView: View {
                     y: 3
                 )
             }
-            .offset(y: 210)
+            .offset(y: moveUpward ? 210 : 300)
         }
         .frame(width: 335, height: 545)
         .background(
@@ -76,6 +85,22 @@ struct CardView: View {
         )
         .cornerRadius(16)
         .shadow(radius: 8)
+        .onAppear() {
+            withAnimation(.linear(duration: 1.2)) {
+                self.fadeIn.toggle()
+            }
+            withAnimation(.linear(duration: 0.8)) {
+                self.moveDownward.toggle()
+                self.moveUpward.toggle()
+            }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(card.title),
+                message: Text(card.message),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
 }
 
