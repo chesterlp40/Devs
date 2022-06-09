@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		865FC8AB2851652C000AB5DB /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865FC8AA2851652C000AB5DB /* CardModel.swift */; };
+		865FC8AD285166E6000AB5DB /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865FC8AC285166E6000AB5DB /* CardData.swift */; };
+		865FC8AF28516BFD000AB5DB /* sound-chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 865FC8AE28516BFD000AB5DB /* sound-chime.mp3 */; };
+		865FC8B128516C37000AB5DB /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865FC8B028516C37000AB5DB /* PlaySound.swift */; };
 		869FC52C28503F5F00C962EC /* DevsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FC52B28503F5F00C962EC /* DevsApp.swift */; };
 		869FC52E28503F5F00C962EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FC52D28503F5F00C962EC /* ContentView.swift */; };
 		869FC53028503F6200C962EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869FC52F28503F6200C962EC /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		865FC8AA2851652C000AB5DB /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		865FC8AC285166E6000AB5DB /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		865FC8AE28516BFD000AB5DB /* sound-chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-chime.mp3"; sourceTree = "<group>"; };
+		865FC8B028516C37000AB5DB /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		869FC52828503F5F00C962EC /* Devs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869FC52B28503F5F00C962EC /* DevsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevsApp.swift; sourceTree = "<group>"; };
 		869FC52D28503F5F00C962EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,9 +63,13 @@
 		869FC52A28503F5F00C962EC /* Devs */ = {
 			isa = PBXGroup;
 			children = (
+				865FC8AE28516BFD000AB5DB /* sound-chime.mp3 */,
 				869FC52B28503F5F00C962EC /* DevsApp.swift */,
+				865FC8B028516C37000AB5DB /* PlaySound.swift */,
 				869FC52D28503F5F00C962EC /* ContentView.swift */,
+				865FC8AA2851652C000AB5DB /* CardModel.swift */,
 				869FC53B285047CE00C962EC /* CardView.swift */,
+				865FC8AC285166E6000AB5DB /* CardData.swift */,
 				869FC539285044F200C962EC /* LaunchScreen.storyboard */,
 				869FC52F28503F6200C962EC /* Assets.xcassets */,
 				869FC53128503F6200C962EC /* Preview Content */,
@@ -132,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				869FC53A285044F200C962EC /* LaunchScreen.storyboard in Resources */,
+				865FC8AF28516BFD000AB5DB /* sound-chime.mp3 in Resources */,
 				869FC53328503F6200C962EC /* Preview Assets.xcassets in Resources */,
 				869FC53028503F6200C962EC /* Assets.xcassets in Resources */,
 			);
@@ -144,7 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865FC8AD285166E6000AB5DB /* CardData.swift in Sources */,
+				865FC8B128516C37000AB5DB /* PlaySound.swift in Sources */,
 				869FC52E28503F5F00C962EC /* ContentView.swift in Sources */,
+				865FC8AB2851652C000AB5DB /* CardModel.swift in Sources */,
 				869FC53C285047CE00C962EC /* CardView.swift in Sources */,
 				869FC52C28503F5F00C962EC /* DevsApp.swift in Sources */,
 			);
@@ -203,6 +219,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;

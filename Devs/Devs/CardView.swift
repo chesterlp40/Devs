@@ -10,24 +10,21 @@ import SwiftUI
 struct CardView: View {
     // MARK: - PROPERTIES
     
-    let gradient = [
-        Color("Color01"),
-        Color("Color02")
-    ]
+    var card: Card
     
     // MARK: - CARD
     
     var body: some View {
         ZStack {
-            Image("developer-no3")
+            Image(card.imageName)
             
             VStack {
-                Text("SwiftUI")
+                Text(card.title)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
-                Text("Better apps. Less code.")
+                Text(card.headline)
                     .fontWeight(.light)
                     .foregroundColor(Color.white)
                     .italic()
@@ -37,9 +34,11 @@ struct CardView: View {
             
             Button(action: {
                 print("Button was tapped")
+                
+                playSound("sound-chime", "mp3")
             }) {
                 HStack {
-                    Text("Learn".uppercased())
+                    Text(card.callToAction.uppercased())
                         .fontWeight(.heavy)
                         .foregroundColor(Color.white)
                         .accentColor(Color.white)
@@ -52,7 +51,7 @@ struct CardView: View {
                 .padding(.horizontal, 24)
                 .background(
                     LinearGradient(
-                        colors: gradient,
+                        colors: card.gradientColors,
                         startPoint: .leading,
                         endPoint: .trailing
                     )
@@ -70,7 +69,7 @@ struct CardView: View {
         .frame(width: 335, height: 545)
         .background(
             LinearGradient(
-                colors: gradient,
+                colors: card.gradientColors,
                 startPoint: .top,
                 endPoint: .bottom
             )
@@ -84,7 +83,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView(card: cardData[4])
             .previewLayout(.sizeThatFits)
     }
 }
